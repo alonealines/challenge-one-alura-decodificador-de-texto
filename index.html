@@ -17,29 +17,26 @@
     <img src="/img/Frame 6.svg" alt="alura" />
   </header>
   <main class="container">
-    <section class="entradadedados">
-      <textarea placeholder="Digite a mensagem que deseja criptografar" name="" id="entrada" cols="70"
+    <section class="entrada-texto">
+      <textarea class="textarea" placeholder="Digite a mensagem que deseja criptografar" name="" id="entrada" cols="70"
         rows="10"></textarea>
-
+        <div class="info">
+          <img class="exclamacao" src="Img/exclamacao.png">
+          <h6>Apenas letras minúsculas e sem acento!</h6>
+      </div>
       <div class="botoes-criptografia">
-        <a class="botao-primario" id="botao-criptogafar" href="#">Criptografar</a>
-        <a class="botao-secundario" id="botao-descriptogafar" href="#">Descriptografar</a>
+        <a class="botao-primario" id="botao-criptogafar" onclick="botaoEncriptar()" href="#">Criptografar</a>
+        <a class="botao-secundario" id="botao-descriptogafar" onclick="botaoDesencriptar()" href="#">Descriptografar</a>
       </div>
     </section>
 
     <section class="text-result">
-      <div class="mensagem-criptografada">
-        <img src="/img/Frame.svg" alt="" />
-        
-        <p>Nenhuma mensagem encontrada</p>
-        <p>
-          Digite um texto que você deseja criptografar ou descriptografar.
-        </p>
-      </div>
-      </div>
+        <textarea class="mensagem-criptografada" cols="30" rows="10" readonly></textarea>
+        <button class="btn-copiar" onclick="btnCopiar()"></button>
     </section>
   </main>
   <footer>Desenvolvido por Aline Galvão para o curso ONE + Alura</footer>
+  <script src="/script.js"></script>
 </body>
 
 </html>
