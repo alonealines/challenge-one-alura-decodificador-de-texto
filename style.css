@@ -54,6 +54,13 @@ textarea::placeholder {
   color: #0a3871;
 }
 
+.info {
+  display: flex;
+  padding: 2rem;
+  gap: 5px;
+  color: #495057;
+}
+
 .botoes-criptografia {
   margin-right: 4rem;
   padding: 3rem;
