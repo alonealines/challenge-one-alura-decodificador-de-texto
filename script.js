@@ -1,6 +1,5 @@
 const textArea = document.querySelector(".textarea");
 const mensagem = document.querySelector(".mensagem-criptografada");
-
 //As "chaves" de criptografia que utilizaremos são:
 //A letra "e" é convertida para "enter"
 //A letra "i" é convertida para "imes"
@@ -8,54 +7,78 @@ const mensagem = document.querySelector(".mensagem-criptografada");
 //A letra "o" é convertida para "ober"
 //A letra "u" é convertida para "ufat"
 
+document.querySelector(".mensagem-criptografada").style.display = "none";
+document.querySelector(".btn-copiar").style.display = "none";
+
 function botaoEncriptar() {
-	const textoEncriptado = encriptar(textArea.value);
-	mensagem.value = textoEncriptado;
-	textArea.value = "";
+  const textoEncriptado = encriptar(textArea.value);
+  mensagem.value = textoEncriptado;
+  textArea.value = "";
 }
 
 function encriptar(stringEncriptada) {
+  let matrizCodigo = [
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"],
+  ];
+  stringEncriptada = stringEncriptada.toLowerCase();
 
-	let matrizCodigo = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u" , "ufat"]]
-	stringEncriptada = stringEncriptada.toLowerCase();
+  for (let i = 0; i < matrizCodigo.length; i++) {
+    if (stringEncriptada.includes(matrizCodigo[i][0])) {
+      stringEncriptada = stringEncriptada.replaceAll(
+        matrizCodigo[i][0],
+        matrizCodigo[i][1]
+      );
+    }
 
-	for(let i = 0; i < matrizCodigo.length; i++) {
-		if(stringEncriptada.includes(matrizCodigo[i][0])) {
-			stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
-		}
-	}
+    document.querySelector(".sem-mensagem").style.display = "none";
+    document.querySelector(".mensagem-criptografada").style.display = "inline";
+    document.querySelector(".btn-copiar").style.display = "inline";
+  }
 
-	return stringEncriptada;
+  return stringEncriptada;
 }
 
 function botaoDesencriptar() {
-	const textoDesencriptado = desencriptar(textArea.value);
-	mensagem.value = textoDesencriptado;
-	textArea.value = "";
+  const textoDesencriptado = desencriptar(textArea.value);
+  mensagem.value = textoDesencriptado;
+  textArea.value = "";
 }
 
 function desencriptar(stringDesencriptada) {
+  let matrizCodigo = [
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"],
+  ];
+  stringDesencriptada = stringDesencriptada.toLowerCase();
 
-	let matrizCodigo = [["e" , "enter"] , ["i" , "imes"] , ["a" , "ai"] , ["o" , "ober"] , ["u" , "ufat"]]
-	stringDesencriptada = stringDesencriptada.toLowerCase();
+  for (let i = 0; i < matrizCodigo.length; i++) {
+    if (stringDesencriptada.includes(matrizCodigo[i][1])) {
+      stringDesencriptada = stringDesencriptada.replaceAll(
+        matrizCodigo[i][1],
+        matrizCodigo[i][0]
+      );
+    }
+  }
 
-	for(let i = 0; i < matrizCodigo.length; i++) {
-		if(stringDesencriptada.includes(matrizCodigo[i][1])) {
-			stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
-		}
-	}
-
-	return stringDesencriptada;
+  return stringDesencriptada;
 }
 
 function btnCopiar() {
-    const texto = mensagem.value;
-    navigator.clipboard.writeText(texto)
-      .then(() => {
-        console.log("Texto copiado para a área de transferência: " + texto);
-      })
-      .catch((error) => {
-        console.error("Erro ao copiar o texto: ", error);
-      });
-      mensagem.value = "";
+  const texto = mensagem.value;
+  navigator.clipboard
+    .writeText(texto)
+    .then(() => {
+      console.log("Texto copiado para a área de transferência: " + texto);
+    })
+    .catch((error) => {
+      console.error("Erro ao copiar o texto: ", error);
+    });
+  mensagem.value = "";
 }
