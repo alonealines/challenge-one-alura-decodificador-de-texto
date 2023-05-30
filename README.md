@@ -15,5 +15,5 @@ Construa um decodificador de texto com Javascript
 ## Decodificador
 A página pode ser acessada [aqui](https://alonealines.github.io/challenge-one-alura-decodificador-de-texto/)
 
-## Badge
-![Badge](https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1671211139Prancheta_3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_br&utm_medium=email&utm_source=RD+Station)
+## Badge de conclusão do desafio
+![Badge](https://github.com/alonealines/challenge-one-alura-decodificador-de-texto/assets/100536475/a36b9e4e-7c90-49d4-a487-2b28c70b6810)
