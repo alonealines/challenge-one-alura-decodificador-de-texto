@@ -50,7 +50,6 @@ textarea::placeholder {
   font-size: 1.25rem;
   line-height: 1.65rem;
   color: #0a3871;
-  
 }
 
 .info {
@@ -91,6 +90,21 @@ textarea::placeholder {
   border-radius: 24px;
 }
 
+.botao-primario:hover {
+  color: #0a3871;
+  background: #d8dfe8;
+}
+
+.botao-secundario:hover {
+  color: #d8dfe8;
+  background: #0a3871;
+}
+
+button:hover {
+  color: #ffffff;
+  background-color: #0a3871;
+}
+
 .caixa-texto {
   padding: 30px 20px;
   background: #ffffff;
@@ -109,17 +123,18 @@ p {
   justify-content: center;
 }
 
-.mensagem-criptografada{
-  display:flex ;
+.mensagem-criptografada {
+  display: flex;
   justify-content: center;
   align-items: center;
   background: #ffffff;
-
 }
 .btn-copiar {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
   text-align: center;
   padding: 20px 100px;
   border-radius: 24px;
