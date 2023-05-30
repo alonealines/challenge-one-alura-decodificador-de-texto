@@ -43,7 +43,7 @@ function encriptar(stringEncriptada) {
 }
 
 function botaoDesencriptar() {
-  const textoDesencriptado = desencriptar(textArea.value);
+  const textoDesencriptado = desencriptar(mensagem.value);
   mensagem.value = textoDesencriptado;
   textArea.value = "";
 }
