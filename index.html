@@ -1,46 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Decodificador de Texto</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <title>Decodificador de Texto</title>
-</head>
-
-<body>
-  <header>
-    <img src="/img/Frame 6.svg" alt="alura" />
-  </header>
-  <nav class="icons">
-   <a href="https://github.com/alonealines/challenge-one-alura-decodificador-de-texto"><img src="/img/github.svg" alt="github"></a> 
-    <a href="https://www.linkedin.com/in/alinegalvaos/"><img src="/img/linkedin.svg" alt="linkedin"></a>
-  </nav>
-  <main class="container">
-    <section class="entrada-texto">
-      <textarea class="textarea" placeholder="Digite a mensagem que deseja criptografar" name="" id="entrada" cols="70"
-        rows="10"></textarea>
+  <body>
+    <header>
+      <a href="index.html"><img src="/img/Frame 6.svg" alt="alura" /></a>
+    </header>
+    <nav class="icons">
+      <a
+        href="https://github.com/alonealines/challenge-one-alura-decodificador-de-texto"
+        ><img src="/img/github.svg" alt="github"
+      /></a>
+      <a href="https://www.linkedin.com/in/alinegalvaos/"
+        ><img src="/img/linkedin.svg" alt="linkedin"
+      /></a>
+    </nav>
+    <main class="container">
+      <section class="entrada-texto">
+        <textarea
+          class="textarea"
+          placeholder="Digite a mensagem que deseja criptografar"
+          name=""
+          id="entrada"
+          cols="70"
+          rows="10"
+        ></textarea>
         <div class="info">
-          <img class="exclamacao" src="/img/exclamation.svg">
+          <img class="exclamacao" src="/img/exclamation.svg" />
           <h6>Apenas letras minúsculas e sem acento!</h6>
-      </div>
-      <div class="botoes-criptografia">
-        <a class="botao-primario" id="botao-criptogafar" onclick="botaoEncriptar()" href="#">Criptografar</a>
-        <a class="botao-secundario" id="botao-descriptogafar" onclick="botaoDesencriptar()" href="#">Descriptografar</a>
-      </div>
-    </section>
+        </div>
+        <div class="botoes-criptografia">
+          <a
+            class="botao-primario"
+            id="botao-criptografar"
+            onclick="botaoEncriptar()"
+            href="#"
+            >Criptografar</a
+          >
+          <a
+            class="botao-secundario"
+            id="botao-descriptografar"
+            onclick="botaoDesencriptar()"
+            href="#"
+            >Descriptografar</a
+          >
+        </div>
+      </section>
 
-    <section class="text-result">
-        <textarea class="mensagem-criptografada" cols="30" rows="10" readonly></textarea>
-        <button class="btn-copiar" onclick="btnCopiar()"></button>
-    </section>
-  </main>
-  <footer>Desenvolvido por Aline Galvão para o curso ONE + Alura</footer>
-  <script src="/script.js"></script>
-</body>
+      <section class="caixa-texto">
+        <div class="sem-mensagem">
+          <img src="/img/Frame.svg" alt="" />
+          <h1>Nenhuma mensagem encontrada</h1>
+          <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+        </div>
 
+        <div class="saida-texto">
+          <textarea
+            class="mensagem-criptografada"
+            cols="20"
+            rows="10"
+            readonly
+          ></textarea>
+          <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+        </div>
+      </section>
+    </main>
+    <footer>Desenvolvido por Aline Galvão para o curso ONE + Alura</footer>
+    <script src="/script.js"></script>
+  </body>
 </html>
